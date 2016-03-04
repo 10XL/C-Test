@@ -177,8 +177,8 @@ h1#menu{
   height: 700px;
 }
 
-.reallyTallSection{
-  height: 1000px;
+.col-xs-12{
+  height: 1200px;
 }
 
 .menuItemText{
