@@ -1,0 +1,209 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #F2F8EA;
+  font-family: 'Oxygen', sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: #6797A1;
+  border-radius: 0;
+  border: 0;
+}
+
+#logo-img {
+  background: url('../images/restaurant-logo_large.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Montserrat', sans-serif;
+  color: #F2F8EA;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p { /* Kosher cert */
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #FABFA1;
+  font-family: 'Oxygen', sans-serif;
+}
+#nav-list a:hover {
+  background: #ECEFA9;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #E3E7B1;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -50px;
+}
+/* END HEADER */
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .container .jumbotron {
+    background: url('../images/jumbotron_1200.jpg') no-repeat;
+    height: 675px;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  /* End Header */
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+    margin-top: 20px;
+  }
+  .navbar-brand p { /* Kosher cert */
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /* Star-K */
+    height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 5px;
+    font-size: 6vw;
+  }
+  /* End Header */
+  
+}
+
+
+
+
+
+
+/*********** Base styles ************/
+h1#menu{
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #6797A1;
+  font-family: 'Oxygen', sans-serif;
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+.menuTitle{
+  font-size: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  /*
+  display: inline-block;
+  position: absolute;
+  margin-top: -15px;
+  top: 15px;
+  right: 50px;
+  margin-bottom: 0;
+  border: 1px solid black;
+  /* account for overlapping border */
+  /*
+  border-top: 0px solid black;
+  border-right: 0px solid black;
+  width: 200px;
+  padding: 2px;
+  /* text-align: center; using bootstrap class to center */
+}
+
+.menuItem{
+  position: relative;
+  /*border: 1px solid black;*/
+  padding: 30px;
+  background-color: #E3E7B1;
+  margin: 15px;
+  overflow: hidden;
+  height: 700px;
+}
+
+.reallyTallSection{
+  height: 1000px;
+}
+
+.menuItemText{
+  color: #6797A1;
+  font-size: 1.25em;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: bold;
+}
+
+#chicken{
+ color: #FABFA1;
+ /*background-color: #E79EB6;*/
+}
+
+#beef{
+ color: #FABFA1;
+ /*background-color: #D75E73;*/
+}
+
+#sushi{
+ color: #FABFA1;
+ /*background-color:  #F7E0A1;*
+}
