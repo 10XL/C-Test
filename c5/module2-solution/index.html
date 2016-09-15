@@ -31,7 +31,7 @@
 		<div class="row">
 
 			<!-- To Buy List -->
-			<div class="col-md-6" ng-controller="ToBuyShoppingController">
+			<div class="col-md-6" ng-controller="ToBuyShoppingController as ToBuy">
 				<h2>To Buy:</h2>
 				<ul class="list-unstyled list-group">
 					<li ng-repeat="item in items" class="list-group-item list-group-item-warning">
@@ -43,7 +43,7 @@
 			</div>
 
 			<!-- Already Bought List -->
-			<div class="col-md-6" ng-controller="AlreadyBoughtShoppingController">
+			<div class="col-md-6" ng-controller="AlreadyBoughtShoppingController as Bought">
 				<h2>Already Bought:</h2>
 				<ul class="list list-unstyled list-group">
 					<li ng-repeat="item in boughtItems" class="list-group-item list-group-item-success">
