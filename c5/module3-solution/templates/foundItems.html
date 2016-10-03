@@ -1,0 +1,8 @@
+	<li ng-repeat="item in list.items" class="col-xs-offset-6">
+
+		<div class=" card card-block text-xs-center">
+			<h4 class="card-title">{{item.name}} <small>{{item.short_name}}</small></h4>
+			<p class="card-text">{{item.description}}</p>
+			<a class="btn btn-danger" ng-click="list.onRemove({index: $index})">Don't want this one!</a>
+		</div>
+	</li>
