@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row" ng-show="userCtrl.userInfo.firstName">
+		<h4>Name: {{userCtrl.userInfo.firstName}} {{userCtrl.userInfo.lastName}}</h4>
+		<div>Email: {{userCtrl.userInfo.email}}</div>
+		<div>Phone: {{userCtrl.userInfo.phone}}</div>
+		<div>Email: {{userCtrl.userInfo.email}}</div>
+		<div>Favorite:<span ng-if="!userCtrl.userInfo.favItem[0]">Dish Not Found! No such menu number exists</span></div>
+		<div class="card" ng-show="userCtrl.userInfo.favItem[0]">
+			<div class="card-block">
+				<h4 class="card-title">Name: {{userCtrl.userInfo.favItem[0].name}}<h5>(Short name: {{userCtrl.userInfo.favorite}})</h5></h4>
+			</div>
+			<img ng-src="images/menu/{{userCtrl.userInfo.favorite}}/{{userCtrl.userInfo.favorite}}.jpg" alt="{{userInfo.userInfo.favItem.name}}">
+			<div class="card-block">
+				<p class="card-text">Description:{{userCtrl.userInfo.favItem[0].description || 'None'}}</p>
+			</div>
+		</div>
+	</div>
+	<div ng-show="!userCtrl.userInfo.firstName">
+	<a ui-sref="public.signup"><h3>You must sign up first!</h3></a>
+		
+	</div>
+</div>

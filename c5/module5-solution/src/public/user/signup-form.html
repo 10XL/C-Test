@@ -1,0 +1,54 @@
+<div class="container">
+  <style type="text/css">
+  .ng-touched.ng-valid {
+  border: 2px green solid;
+  }
+  .ng-touched.ng-invalid {
+  border: 2px red solid;
+  }
+  .required-field {
+  color: red;
+  }
+  </style>
+  <div class="row">
+    <form class="col-md-6 col-md-push-3 col-xs-12" name="regForm" novalidate style="background-color: #FFFFFF;border-radius: 2px">
+      <legend id="registrain-header">Registration</legend>
+      <div class="form-group col-md-4 col-xs-12">
+        <label class="sr-only" for="firstName">First Name</label>
+        <input type="text" ng-model="reg.user.firstName" class="form-control" name="firstName" id="firstName" placeholder="First Name"
+        required
+        minlength="3">
+        <span ng-if="(regForm.firstName.$error.minlength || regForm.firstName.$error.required) && regForm.firstName.$touched" class="glyphicon glyphicon-asterisk required-field" aria-hidden="true">Required</span>
+      </div>
+      <div class="form-group col-md-4 col-xs-12">
+        <label class="sr-only" for="lastName">Last Name</label>
+        <input type="text" ng-model="reg.user.lastName" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required>
+        <span ng-if="(regForm.lastName.$error.minlength || regForm.lastName.$error.required) && regForm.lastName.$touched" class="glyphicon glyphicon-asterisk required-field" aria-hidden="true">Required</span>
+      </div>
+      <div class="form-group col-md-4 col-xs-12">
+        <label class="sr-only" for="favorite">Favorite Item</label>
+        <input type="text" ng-model="reg.user.favorite" class="form-control" name="favorite" id="favorite" placeholder="Favorite(Menu #)">
+      </div>
+      <div class="row" ng-if="regForm.favorite.$touched && reg.user.favorite !== '' && !userCtrl.menuShortNames.includes(reg.user.favorite)">
+        <div class="col-md-4 col-md-push-8 alert alert-danger" role="alert">
+          <strong>Dish not found!</strong>
+        </div>
+      </div>
+      <div class="form-group col-md-22 col-xs-12">
+        <label class="sr-only" for="email">Email address</label>
+        <input type="email" ng-model="reg.user.email" class="form-control" name="email" id="email" placeholder="Email Address" required>
+        <span ng-if="(regForm.email.$error.minlength || regForm.email.$error.required) && regForm.email.$touched" class="glyphicon glyphicon-asterisk required-field" aria-hidden="true">Required</span>
+      </div>
+      <div class="form-group col-md-8 col-xs-12">
+        <label class="sr-only" for="phone">Telephone Number</label>
+        <input type="tel" ng-model="reg.user.phone" class="form-control" placeholder="### ### ####" name="phone" id="phone" required
+        pattern="(\d{3})-(\d{3})-(\d{4})">
+        <span ng-if="(regForm.phone.$error.minlength || regForm.phone.$error.required) && regForm.phone.$touched" class="glyphicon glyphicon-asterisk required-field" aria-hidden="true">Required</span>
+      </div>
+      <div class="form-group col-md-4 col-xs-12">
+        <button type="submit" ng-disabled="regForm.$invalid" ng-click="userCtrl.signUp(reg.user)" ui-sref="public.user" class="col-md-8 col-md-push-2 btn btn-primary">Submit</button>
+      </div>
+      <div class="col-xs-12"><span style="padding: 20px"></span></div>
+    </form>
+  </div>
+</div>
